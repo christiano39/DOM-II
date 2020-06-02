@@ -15,13 +15,13 @@ blocks.forEach(block => {
     });
     block.addEventListener('mousedown', e => {
         interval = setInterval(function(){
-            move += 1;
+            move += 2;
             block.style.transform = `translateX(${move}px)`;
         }, 10);
     });
     window.addEventListener('mouseup', e => {
         clearInterval(interval);
-        move = 0;
+        //move = 0;
         block.style.transform = `translateX(${move}px)`;
     });
 });
