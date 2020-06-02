@@ -20,7 +20,9 @@ function backToDefaultColor(e){
 }
 
 mainHeading.addEventListener('mouseenter', randomColorOnHover);
-mainHeading.addEventListener('mouseleave', backToDefaultColor);
+
+// H1 back to default color - dblclick
+mainHeading.addEventListener('dblclick', backToDefaultColor); 
 
 // Header border - click
 const header = document.querySelector('header');
