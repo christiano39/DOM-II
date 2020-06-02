@@ -35,9 +35,9 @@ headerImg.addEventListener('wheel', e => {
 });
 
 // Page Load alert - load
-window.addEventListener('load', e => {
-    alert('Page has loaded!');
-});
+// window.addEventListener('load', e => {
+//     alert('Page has loaded!');
+// });
 
 // Nav Items - Focus
 const navItems = Array.from(document.querySelectorAll('nav a'));
@@ -61,4 +61,14 @@ window.addEventListener('resize', e => {
     windowHeight = window.innerHeight;
     windowWidth = window.innerWidth;
     windowSizeElement.textContent = `Window width: ${windowWidth}, Window height: ${windowHeight}`;
+});
+
+// Main content imgs - scroll
+const mainImages = Array.from(document.querySelectorAll('.img-content img'));
+let degrees = 0;
+window.addEventListener('scroll', e => {
+    mainImages.forEach(image => {
+        degrees += 0.5;
+        image.style.transform = `rotate(${degrees}deg)`;
+    })
 });

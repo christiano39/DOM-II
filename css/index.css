@@ -265,6 +265,7 @@ img {
 }
 .home .content-section .img-content img {
   border-radius: 10px;
+  transform: rotate(10deg);
 }
 @media (max-width: 500px) {
   .home .content-section .img-content img {
