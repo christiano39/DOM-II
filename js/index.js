@@ -6,6 +6,7 @@ function randomColorOnHover(e){
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
     e.target.style.color = `rgb(${r}, ${g}, ${b})`;
+    e.stopPropagation();
 }
 
 function randomColor(){
@@ -16,10 +17,11 @@ function randomColor(){
 }
 
 function backToDefaultColor(e){
-    e.target.style.color = '#212529';
+    mainHeading.style.color = '#212529';
 }
 
 mainHeading.addEventListener('mouseenter', randomColorOnHover);
+mainHeading.addEventListener('click', randomColorOnHover);
 
 // H1 back to default color - dblclick
 mainHeading.addEventListener('dblclick', backToDefaultColor); 
@@ -27,7 +29,7 @@ mainHeading.addEventListener('dblclick', backToDefaultColor);
 // Header border - click
 const header = document.querySelector('header');
 header.addEventListener('click', e => {
-    e.target.classList.toggle('solid-border');
+    header.classList.toggle('solid-border');
 });
 
 // Header Img border - wheel
