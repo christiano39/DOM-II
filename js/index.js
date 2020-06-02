@@ -37,9 +37,9 @@ headerImg.addEventListener('wheel', e => {
 });
 
 // Page Load alert - load
-// window.addEventListener('load', e => {
-//     alert('Page has loaded!');
-// });
+window.addEventListener('load', e => {
+    alert('Page has loaded!');
+});
 
 // Nav Items - Focus
 const navItems = Array.from(document.querySelectorAll('nav a'));
@@ -73,4 +73,17 @@ window.addEventListener('scroll', e => {
         degrees += 0.5;
         image.style.transform = `rotate(${degrees}deg)`;
     })
+});
+
+// Copy
+document.addEventListener('copy', e => {
+    alert("Successfully copied!");
+});
+
+// F - keydown
+const copyright = document.querySelector('.footer p:nth-of-type(1)');
+document.addEventListener('keydown', e => {
+    if (e.key === 'f'){
+        copyright.textContent = "You have paid respects.";
+    }
 });
