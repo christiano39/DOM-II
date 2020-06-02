@@ -55,6 +55,12 @@ navItems.forEach(navItem => {
         navItem.style.color = '#212529';
     });
 });
+navItems.forEach(navItem => {
+    navItem.addEventListener('click', e => {
+        e.stopPropagation();
+        e.preventDefault();
+    })
+});
 
 // Footer window size - resize
 const windowSizeElement = document.getElementById('window-size');
