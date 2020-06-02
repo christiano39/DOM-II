@@ -51,3 +51,14 @@ navItems.forEach(navItem => {
         navItem.style.color = '#212529';
     });
 });
+
+// Footer window size - resize
+const windowSizeElement = document.getElementById('window-size');
+let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
+windowSizeElement.textContent = `Window width: ${windowWidth}, Window height: ${windowHeight}`;
+window.addEventListener('resize', e => {
+    windowHeight = window.innerHeight;
+    windowWidth = window.innerWidth;
+    windowSizeElement.textContent = `Window width: ${windowWidth}, Window height: ${windowHeight}`;
+});
